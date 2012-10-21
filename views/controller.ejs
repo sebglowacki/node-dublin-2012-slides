@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Seb Glowacki" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/stylesheets/controller.css"/>
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  </head>
+  <body class="impress-not-supported">
+
+    <div id="controller">
+        <button id="start" onclick="start()">Start</button>        
+        <button id="prev" onclick="prev()">Prev</button>
+        <button id="next" onclick="next()">Next</button>
+    </div>
+
+    <div id="touchscreen" class="touchscreen"></div>
+
+    <script src="/javascripts/controller.js"></script>
+    <script src="/javascripts/zepto.min.js"></script>
+    <script src="/javascripts/hammer.js"></script>
+    <script type="text/javascript">
+      var hammer = new Hammer(document.getElementById("touchscreen"));
+      console.log(hammer);
+      hammer.onswipe = function(ev) { 
+        console.log("swipe")
+        if (ev.direction === 'right')
+          next();
+        if (ev.direction === 'left')
+          prev();
+
+      };
+      hammer.ondoubletap = function(ev) { 
+        console.log("dtap");
+      };
+    </script>
+
+  </body>
+</html>
