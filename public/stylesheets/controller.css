@@ -13,14 +13,19 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-button {
-	width: 200px;
-	height: 100px;
+.touchscreen {
+	width:100%;
+	min-height:1000px;
 }
 
-.touchscreen {
-	width:600px;
-	height:300px;
-	color:red;
-	background-color: red;
+@media (min-width: 500px) {
+    html {
+        font-size: 50px;
+    }
+}
+ 
+@media (max-width: 499px) {
+    html {
+        font-size: 30px;
+    }
 }

@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , http = require('http')
   , path = require('path');
@@ -37,8 +32,8 @@ Eventer = function(){
   events.EventEmitter.call(this);
   this.sendCmd = function(cmd){
      this.emit(cmd);
-  }
- };
+  };
+};
 util.inherits(Eventer, events.EventEmitter);
 
 
@@ -46,13 +41,17 @@ util.inherits(Eventer, events.EventEmitter);
 var eventer = new Eventer();
 
 io.sockets.on('connection', function (socket) {
-
+  
   eventer.on('next', function() {
       socket.emit('cmd', 'next');  
   });
 
   eventer.on('prev', function() {
       socket.emit('cmd', 'prev');  
+  });
+
+  eventer.on('start', function() {
+    socket.emit('cmd', 'start');
   });
 
 });

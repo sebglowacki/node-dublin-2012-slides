@@ -10,7 +10,7 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <link rel="stylesheet" href="/stylesheets/impress-demo.css"/>
+    <link rel="stylesheet" href="/stylesheets/index.css"/>
     <link rel="shortcut icon" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   </head>
@@ -25,19 +25,27 @@
 
 	    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
 	        <span class="try">The Node Conference</span>
-	        <h1>Node Dublin 2012</h1>
+	        <h1>NodeDublin</h1>
 	        <span class="footnote">Seb Glowacki</span>
 	    </div>   
 
 	    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-	        <p>It's a <strong>presentation tool</strong> <br/>
-	        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-	        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+	        <p>First <strong>Node.js</strong> conference in Europe<br/>
+	        	organized by people who contribute to Node.js project and the Node.js community.
+	        </p>
 	    </div>
 
 	    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-	        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+	    	<p>Speakers <b>list</b> on the event website</p>	         
 	    </div>
+
+	    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        	<p><a href="http://nodedublin.com">nodedublin.com</a></p>
+    	</div>
+    	
+    	<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        	<p>Event took place in <b class="positioning">Guinness Storehouse</b> just <b class="rotating">around</b> the <b class="scaling">corner</b></p>
+    	</div>
     	         	
 	</div>
 
@@ -61,6 +69,8 @@
         	impress().next();
         if (data === 'prev')
         	impress().prev();
+        if (data === 'start')
+        	impress().goto(0);
       });
     </script>
   </body>
