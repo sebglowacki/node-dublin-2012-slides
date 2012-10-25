@@ -16,6 +16,7 @@ body {
 .touchscreen {
 	width:100%;
 	min-height:1000px;
+	/*background-color: red;*/
 }
 
 @media (min-width: 500px) {
@@ -29,3 +30,9 @@ body {
         font-size: 30px;
     }
 }
+
+/*button {
+	height: 100px;
+	width: 200px;
+	font-size: 60px;
+}*/

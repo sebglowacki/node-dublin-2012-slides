@@ -65,6 +65,7 @@ app.get('/controller', function(req, res) {
 });
 
 app.post('/controller', function(req, res) {
+  // console.log(req.body.cmd);
   eventer.sendCmd(req.body.cmd);
   res.send(200);
 });
